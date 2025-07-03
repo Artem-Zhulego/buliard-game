@@ -1,0 +1,145 @@
+.inGameModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    opacity: 0;
+    animation: inGameModalFadeInOverlay 0.4s forwards;
+}
+
+@keyframes inGameModalFadeInOverlay {
+    to {
+        opacity: 1;
+    }
+}
+
+.inGameModal__content {
+    background-color: #1B1B1B;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    width: 60%;
+    position: relative;
+    text-align: center;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+    transform: translateY(20px);
+    animation: inGameModalSlideIn 0.4s forwards ease-out;
+}
+
+@keyframes inGameModalSlideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.inGameModal__close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.inGameModal__header {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 39px;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+}
+
+.inGameModal__title {
+    color: #FFF;
+    font-size: 26px;
+}
+
+.inGameModal__players {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+.inGameModal__player {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inGameModal__player--me {
+    text-align: left;
+}
+
+.inGameModal__player--opponent {
+    text-align: right;
+}
+
+.inGameModal__avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.inGameModal__avatarPlaceholder {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.inGameModal__username {
+    font-size: 18px;
+}
+
+.inGameModal__versus {
+    margin: 0 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.inGameModal__buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.inGameModal__button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.inGameModal__button--join {
+    background-color: #EEEEEE;
+    color: #0A0A0A;
+}
+
+.inGameModal__button--leave {
+    background-color: transparent;
+    border: 1px solid #EEEEEE;
+    color: #EEEEEE;
+}

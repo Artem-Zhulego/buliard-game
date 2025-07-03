@@ -1,0 +1,86 @@
+.sheet-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999; 
+}
+
+.custom-sheet_header {
+    background-color: #161616;
+}
+
+.custom-sheet_block {
+    background-color: #161616;
+}
+  
+.custom-sheet {
+    position: fixed;
+    bottom: 0;
+    margin-left: 30%;
+    max-width: 440px;
+    width: 100%;
+    height: 100%;
+    background-color: #161616;
+    border-radius: 16px 16px 0 0;
+    z-index: 1000; 
+    overflow: hidden;
+}
+  
+.blocks-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 16px;
+    background-color: #161616;
+    border-radius: 16px 16px 0 0;
+}
+  
+.block-bet {
+    border: 1px solid #EEEEEE; 
+    border-radius: 8px;
+    padding: 5px;
+    text-align: center;
+    font-size: 16px;
+    color: #EEEEEE;
+    background-color: #161616;
+}
+
+.block-bet-header {
+
+}
+
+.block-bet-header img {
+    width: 180px;
+    height: 73px;
+}
+
+.block-bet-header span {
+    font-family: AvantGardeC, sans-serif;
+    font-weight: bold;
+    color: #EEEEEE;
+    font-size: 20px;
+}
+
+.block-bet-info {
+
+}
+
+.block-bet-info button {
+    color: #0A0A0A;
+    background-color: #D1A4EC;
+    border-radius: 5px;
+    border: solid 1px #EEEEEE;
+    padding: 5px 10px;
+    margin-left: 10px;
+    font-family: AvantGardeC, sans-serif;
+    font-weight: bold;
+}
+
+.block-bet-info span {
+    font-family: AvantGardeC, sans-serif;
+    color: #EEEEEE;
+    font-size: 12px
+}

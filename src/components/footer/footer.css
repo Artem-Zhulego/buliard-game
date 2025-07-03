@@ -1,0 +1,78 @@
+:root {
+    --highlight-width: 80px;
+    --highlight-left: 0;
+}
+
+.footer {
+    position: fixed;
+    bottom: 1.25em;
+    width: calc(100% - 2.5em);
+    left: 1.25em;
+    right: 1.25em;
+    background: rgba(94, 53, 177, 0.5); 
+    padding: 0.625em 0; 
+    border-radius: 0.625em; 
+    z-index: 9998;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around; 
+    padding: 0 0.625em; 
+    position: relative;
+}
+
+.menu-link {
+    text-decoration: none;
+    flex: 1;
+    display: flex;
+    justify-content: center; 
+    min-width: 80px; 
+    position: relative;
+    z-index: 1;
+}
+
+.menu-buttons {
+    color: var(--White, #ffffff);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 11px;
+    font-weight: 500; 
+    cursor: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 0.25em; 
+    padding: 11px; 
+    border-radius: 0.625em; 
+    border: none; 
+    width: 100%;
+    background: transparent;
+    transition: color 0.3s;
+}
+
+.menu-icon {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 0.3125em; 
+}
+
+.menu-button_active {
+    color: var(--White, #ffffff);
+}
+
+.menu-button_inactive {
+    color: var(--inactive-color, #ffffff);
+}
+
+.menu-highlight {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: var(--highlight-left);
+    width: var(--highlight-width);
+    background: #FF80AB;
+    border-radius: 0.625em;
+    transition: left 0.3s, width 0.3s;
+    z-index: 0;
+}

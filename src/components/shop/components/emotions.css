@@ -1,0 +1,101 @@
+.shop__emotions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+    max-height: calc(100vh - 140px);
+    width: 100%;
+    overflow-y: auto;
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.shop__emotions::-webkit-scrollbar {
+    display: none;
+}
+
+.shop__emotions-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(37, 37, 37, 0.4);
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 10px 15px;
+}
+
+.shop__emotions-item.last-row {
+    margin-bottom: 10px;
+}
+
+.shop__emotions-item__header {
+    display: flex;
+    text-align: center;
+}
+
+.shop__emotions-item__header-text {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.shop__emotions-item__image-container {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.shop__emotions-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.shop__emotions-item__buy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    gap: 10px;
+}
+
+.shop__emotions-item__buy__button {
+    background-color: rgb(37, 37, 37, 0.8);
+    color: #EEEEEE;
+    border: 1px solid rgba(238, 238, 238, 0.4);
+    border-radius: 8px;
+    padding: 6px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.shop__emotions-item__buy__button-text {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    text-wrap: nowrap;
+}
+
+.shop-separator-item {
+    display: inline-block;
+    width: 1px;
+    height: 16px;
+    background-color: rgba(238, 238, 238, 0.4);
+    margin: 0 6px;
+}
+
+.shop__emotions-item__buy__button-icon {
+    width: 10px;
+    height: 10px;
+    object-fit: contain;
+    margin-left: 2px;
+}

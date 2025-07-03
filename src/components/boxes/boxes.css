@@ -1,0 +1,233 @@
+.boxes-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #0A0A0A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxes {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: url('../../assets/pages-back.png') no-repeat center center;
+    background-size: cover;
+    color: #EEE;
+    position: relative;
+}
+
+.boxes__overlay {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 10, 10, 0.9);
+}
+
+.boxes__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 40px 10px;
+    position: fixed;
+    gap: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.boxes__header-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.boxes__header-back {
+    aspect-ratio: 1;
+    width: 40px;
+    height: 40px;
+    background-color: #D1A4EC;
+    border: none;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxes__header-back__icon {
+    width: 24px;
+    height: 24px;
+}
+
+.boxes__header-text {
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 1px solid rgb(238, 238, 238, 0.4);
+    background-color: rgb(37, 37, 37, 0.4);
+}
+
+.boxes__balance {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.boxes__balance-block {
+    display: flex;
+    align-items: center;
+    background-color: #101010;
+    border: 1px solid rgba(238, 238, 238, 0.4);
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 40px;
+}
+
+.boxes__balance-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    height: 100%;
+}
+
+.boxes__balance-item-text {
+    font-size: 14px;
+    color: #EEE;
+    margin-right: 8px;
+}
+
+.boxes__balance-item-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.boxes__balance-add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: #D1A4EC;
+    border-radius: 0 9px 9px 0;
+    aspect-ratio: 1;
+}
+
+.boxes-separator {
+    width: 1px;
+    height: 40px;
+    background-color: rgba(238, 238, 238, 0.4);
+}
+
+.boxes-separator-mini {
+    width: 1px;
+    height: 20px;
+    background-color: rgba(238, 238, 238, 0.4);
+}
+
+.boxes__container {
+    flex-grow: 1;
+    overflow-y: auto;
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 90px;
+    padding: 0 40px;
+}
+
+.boxes__before-content {
+    margin-top: 20px;
+    overflow: visible;
+}
+
+.boxes__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 20px;
+}
+
+.boxes__item {
+    background: rgba(37, 37, 37, 0.4);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+}
+
+.boxes__item-header {
+    margin-bottom: 10px;
+}
+
+.boxes__item-header-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #EEE;
+}
+
+.boxes__item-kd {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.boxes__item-kd-text {
+    font-size: 14px;
+    color: #AAAAAA;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.boxes__item-kd-price {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.boxes__item-kd-image {
+    width: 16px;
+    height: 16px;
+}
+
+.boxes__item-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.boxes__item-button {
+    flex: 1;
+    background: rgba(37, 37, 37, 0.4);
+    border: 1px solid rgba(238, 238, 238, 0.4);
+    border-radius: 6px;
+    padding: 6px 14px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #EEEEEE;
+    cursor: none;
+}
+
+.boxes__item-button.open-button {
+    background: #EEEEEE;
+    color: #0A0A0A;
+    border: none;
+}
+
+.boxes__item-image {
+    width: 130px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    /* clip-path: inset(0 0 1rem 0); */
+}

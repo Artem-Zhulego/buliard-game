@@ -1,0 +1,105 @@
+.ranks__modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    opacity: 0;
+    animation: fadeInOverlay 0.4s forwards;
+}
+
+@keyframes fadeInOverlay {
+    to {
+        opacity: 1;
+    }
+}
+
+.ranks__modal-content {
+    background-color: #1B1B1B;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    width: 60%;
+    position: relative;
+    text-align: center;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+    transform: translateY(20px);
+    animation: slideInCoins 0.4s forwards ease-out;
+}
+
+@keyframes slideInCoins {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ranks__modal-content__close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 24px; 
+    cursor: none;
+    transition: color 0.2s ease;
+}
+
+.ranks__modal-content__header {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 39px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+}
+
+.ranks__modal-content__header-title {
+    color: rgb(255, 255, 255);
+    font-size: 26px;
+}
+
+.ranks__modal-content__header-icon {
+    width: 32px;
+    margin-right: 10px;
+}
+
+.ranks__modal-content__blocks {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+.ranks__modal-content__block {
+    background-color: #2A2A2A;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.ranks__modal-content__block-image {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.ranks__modal-content__block-name {
+    color: #EEEEEE;
+    font-size: 12px;
+    font-weight: 700;
+}

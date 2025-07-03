@@ -1,0 +1,106 @@
+.shop__subscription {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-height: calc(100vh - 140px);
+    width: 100%;
+    overflow-y: auto;
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+    box-sizing: border-box;
+}
+
+.shop__subscription::-webkit-scrollbar {
+    display: none;
+}
+
+.shop__subscription-item {
+    display: flex;
+    flex-direction: column;
+    background: rgba(37, 37, 37, 0.4);
+    border-radius: 10px;
+    padding: 15px;
+    gap: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 200px;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+}
+
+.shop__subscription-item.last-row {
+    margin-bottom: 10px;
+}
+
+.shop__subscription-item__header-text {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.shop__subscription-image {
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+}
+
+.shop__subscription-item__buy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    gap: 15px;
+    margin-top: auto; 
+    margin-bottom: 10px; 
+}
+
+.shop__subscription-item__buy__button {
+    background-color: rgb(37, 37, 37, 0.8);
+    color: #EEEEEE;
+    border: 1px solid rgba(238, 238, 238, 0.4);
+    border-radius: 8px;
+    padding: 6px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.shop__subscription-item__buy__button-text {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.shop__subscription-item__buy__button-icon {
+    width: 12px;
+    height: 12px;
+    object-fit: contain;
+    margin-left: 5px;
+}
+
+.shop__premium-item__advantages {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.shop__premium-item__advantage-icon {
+    width: 12px;
+    height: 12px;
+}
+
+.shop__premium-item__advantage-text {
+    font-size: 12px;
+    color: #EEEEEE;
+}
+
+.shop__premium-item__advantage {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}

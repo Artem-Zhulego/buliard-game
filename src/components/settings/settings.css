@@ -1,0 +1,225 @@
+.settings-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #0A0A0A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    background: url('../../assets/pages-back.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.settings__overlay {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 10, 10, 0.9);
+}
+
+.settings__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 40px 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.settings__header-button-back {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    cursor: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D1A4EC;
+}
+
+.settings__header-button__icon {
+    width: 24px;
+    height: 24px;
+}
+
+.settings__blocks {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 80px;
+    gap: 10px;
+    color: #FFFFFF;
+    z-index: 1;
+}
+
+.settings__blocks-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(37, 37, 37, 0.4);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.settings__blocks-item-label {
+    font-size: 18px;
+    font-weight: 600;
+    color: #EEEEEE;
+}
+
+.settings__blocks-item-checkbox {
+    width: 40px;
+    height: 20px;
+    position: relative;
+    appearance: none;
+    background-color: rgba(170, 170, 170, 0.4);
+    border-radius: 4px;
+    cursor: none;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.settings__blocks-item-checkbox:checked {
+    background-color: #D9D9D9;
+}
+
+.settings__blocks-item-checkbox::before {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 18px;
+    height: 18px;
+    background-color: #151515;
+    border-radius: 4px;
+    transition: transform 0.3s;
+}
+
+.settings__blocks-item-checkbox:checked::before {
+    transform: translateX(20px);
+}
+
+.settings__cue-sensitivity {
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+    background-color: #151515;
+    border-radius: 8px;
+    position: relative;
+    height: 40px;
+    align-items: center;
+    overflow: hidden;
+    border: 1px solid rgba(238, 238, 238, 0.30);
+    box-sizing: border-box;
+}
+
+.settings__cue-sensitivity-background {
+    position: absolute;
+    height: 100%;
+    width: calc(33.33%);
+    background: #EEEEEE;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 8px;
+    z-index: 0;
+}
+
+.settings__cue-sensitivity-button {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #EEEEEE;
+    height: 100%;
+    cursor: none;
+    transition: color 0.3s, background-color 0.3s;
+    z-index: 1;
+}
+
+.settings__cue-sensitivity-button.active {
+    color: #0A0A0A;
+}
+
+.sensitivity-h {
+    padding: 15px;
+}
+
+.settings__language {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(37, 37, 37, 0.7);;
+    border: 1px solid rgba(238, 238, 238, 0.30);
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.settings__modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    z-index: 1000;
+    overflow: hidden; 
+}
+
+.settings__language-icon {
+    width: 24px;
+    height: 24px;
+    cursor: none;
+}
+
+.settings__language-select {
+    position: absolute;
+    right: 5px;
+    top: 100px;
+    transform: none; 
+    display: flex;
+    flex-direction: column;
+    background: #161616;
+    border: 1px solid #161616;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 99999;
+}
+
+.settings__language-select button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: none;
+    border: none;
+    color: rgba(156, 164, 190, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    padding: 5px;
+    cursor: none;
+    text-align: left;
+}
